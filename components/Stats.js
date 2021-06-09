@@ -43,7 +43,7 @@ const Stats = () => {
               className="object-cover object-center w-full h-full"
               src="/assets/finance_image.jpg"
               alt="stats"
-              lazy
+              lazy="true"
             />
           </div>
         </div>

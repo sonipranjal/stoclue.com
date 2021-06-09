@@ -1,222 +1,44 @@
+import Image from "next/image";
+import FooterGrid from "./FooterGrid";
+
 const FooterComponent = () => {
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
         <div className="md:max-w-md lg:col-span-2">
           <a
-            href="/"
+            href="https://stoclue.com"
             aria-label="Go home"
             title="Company"
             className="inline-flex items-center"
           >
-            <svg
-              className="w-8 text-deep-purple-accent-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg>
+            <Image src="/assets/rupee.png" width={30} height={30} />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+              Stoclue
             </span>
           </a>
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+              We believe that more and more Indians can create wealth by
+              understanding the immense power of the Stock Market.
             </p>
-            <p className="mt-4 text-sm text-gray-800">
-              Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo.
-            </p>
+            <div className="mt-4 text-sm text-gray-800">
+              We aim to make that possible by giving you &nbsp;
+              <div className="text-white bg-gradient-to-r from-yellow-300 to-yellow-500	 py-2 rounded font-mono font-bold w-36 mt-1 px-2">
+                #AchiWaliAdvice
+              </div>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">
-              Category
-            </p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  News
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  World
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Games
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  References
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">
-              Business
-            </p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Web
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  eCommerce
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Business
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Entertainment
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Portfolio
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">Apples</p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Media
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Brochure
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Nonprofit
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Educational
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Projects
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">Cherry</p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Infopreneur
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Personal
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Wiki
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Forum
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {/* <FooterGrid /> */}
       </div>
       <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © Copyright 2021 Stoclue. All rights reserved.
         </p>
         <div className="flex items-center mt-4 space-x-4 sm:mt-0">
           <a
-            href="/"
+            href="https://twitter.com/stoclue"
             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -224,7 +46,7 @@ const FooterComponent = () => {
             </svg>
           </a>
           <a
-            href="/"
+            href="https://instagram.com/stoclue"
             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -233,7 +55,7 @@ const FooterComponent = () => {
             </svg>
           </a>
           <a
-            href="/"
+            href="https://facebook.com/stoclue"
             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">

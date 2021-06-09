@@ -4,7 +4,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 
 const navigation = [
-  { name: "Finance Blog", href: "/ComingSoon" },
+  { name: "Finance Blog", href: "https://blog.stoclue.com" },
   { name: "Return Calculators", href: "/ComingSoon" },
   { name: "Trending Doge News 🚀", href: "/ComingSoon" },
   { name: "Stock Discussions", href: "/ComingSoon" },
@@ -43,7 +43,11 @@ const HeaderComponent = () => {
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
-                    <a className="font-medium text-gray-500 hover:text-indigo-400">
+                    <a
+                      className="font-medium text-gray-600 hover:text-yellow-500 
+                      transition 
+                    "
+                    >
                       {item.name}
                     </a>
                   </Link>
@@ -79,7 +83,7 @@ const HeaderComponent = () => {
                     <img
                       className="h-8 w-auto"
                       src="/assets/rupee.png"
-                      alt=""
+                      alt="logo"
                     />
                   </div>
                   <div className="-mr-2">
