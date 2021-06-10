@@ -6,8 +6,8 @@ import { HiOutlineMenu, HiX } from "react-icons/hi";
 const navigation = [
   { name: "Finance Blog", href: "https://blog.stoclue.com" },
   { name: "Return Calculators", href: "/ComingSoon" },
-  { name: "Trending Doge News 🚀", href: "/ComingSoon" },
-  { name: "Stock Discussions", href: "/ComingSoon" },
+  { name: "Trending News 🚀", href: "/ComingSoon" },
+  // { name: "Stock Discussions", href: "/ComingSoon" },
   { name: "Best Discount Brokers in India", href: "/ComingSoon" },
 ];
 
@@ -33,7 +33,7 @@ const HeaderComponent = () => {
                     </a>
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-yellow-500 hover:text-yellow-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                       <span className="sr-only">Open main menu</span>
                       <HiOutlineMenu className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -87,7 +87,7 @@ const HeaderComponent = () => {
                     />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-yellow-500 hover:text-yellow-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                       <span className="sr-only">Close main menu</span>
                       <HiX className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>

@@ -13,7 +13,9 @@ const LayoutComponent = ({ title, keywords, description, children }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
+
       <HeaderComponent />
+
       {router.pathname === "/" && <Hero />}
 
       <div>{children}</div>

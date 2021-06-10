@@ -30,7 +30,7 @@ const FooterComponent = () => {
             </div>
           </div>
         </div>
-        {/* <FooterGrid /> */}
+        <FooterGrid />
       </div>
       <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
         <p className="text-sm text-gray-600">

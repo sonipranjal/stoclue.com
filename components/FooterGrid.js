@@ -3,14 +3,14 @@ const FooterGrid = () => {
     <>
       <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
         <div>
-          <p className="font-semibold tracking-wide text-gray-800">Category</p>
+          <p className="font-semibold tracking-wide text-gray-800">Premium</p>
           <ul className="mt-2 space-y-2">
             <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                News
+                Stock News
               </a>
             </li>
             <li>
@@ -18,15 +18,15 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                World
+                Crypto News
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Games
+                Invest Virtual 
               </a>
             </li>
             <li>
@@ -36,18 +36,20 @@ const FooterGrid = () => {
               >
                 References
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>
-          <p className="font-semibold tracking-wide text-gray-800">Business</p>
+          <p className="font-semibold tracking-wide text-gray-800">
+            Discussion
+          </p>
           <ul className="mt-2 space-y-2">
             <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Web
+                Indian Stock Market
               </a>
             </li>
             <li>
@@ -55,15 +57,15 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                eCommerce
+                Crypto 🚀
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Business
+                General
               </a>
             </li>
             <li>
@@ -81,18 +83,18 @@ const FooterGrid = () => {
               >
                 Portfolio
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>
-          <p className="font-semibold tracking-wide text-gray-800">Apples</p>
+          <p className="font-semibold tracking-wide text-gray-800">Stoclue</p>
           <ul className="mt-2 space-y-2">
             <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Media
+                About us
               </a>
             </li>
             <li>
@@ -100,7 +102,7 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Brochure
+                Team
               </a>
             </li>
             <li>
@@ -108,7 +110,7 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Nonprofit
+                Privacy Policy
               </a>
             </li>
             <li>
@@ -116,7 +118,7 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Educational
+                Terms & Conditions
               </a>
             </li>
             <li>
@@ -124,20 +126,22 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Projects
+                Return & Refunds
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <p className="font-semibold tracking-wide text-gray-800">Cherry</p>
+          <p className="font-semibold tracking-wide text-gray-800">
+            Contact us
+          </p>
           <ul className="mt-2 space-y-2">
             <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Infopreneur
+                312001, Chittorgrah, India
               </a>
             </li>
             <li>
@@ -145,10 +149,10 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                Personal
+                pranjal@stoclue.com
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -163,7 +167,7 @@ const FooterGrid = () => {
               >
                 Forum
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

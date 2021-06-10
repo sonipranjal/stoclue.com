@@ -4,14 +4,14 @@ import Stats from "./Stats";
 const MainContent = () => {
   return (
     <>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-36">
         <div className="grid max-w-screen-lg gap-8 row-gap-6 sm:mx-auto lg:grid-cols-2">
           <a
             href="https://blog.stoclue.com"
             target="_blank"
             aria-label="View item"
             title="View item"
-            className="relative block p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl"
+            className="relative block p-px overflow-hidden transition duration-300 transform border border-yellow-400 rounded shadow-sm hover:scale-105 group hover:shadow-xl"
           >
             <div className="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
             <div className="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100" />
@@ -19,7 +19,7 @@ const MainContent = () => {
             <div className="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100" />
             <div className="relative flex items-center justify-between p-5 bg-white rounded-sm">
               <div className="pr-4">
-                <h6 className="mb-2 font-semibold leading-5">
+                <h6 className="mb-2 font-semibold leading-5 text-yellow-500">
                   Read our financial blogs.
                 </h6>
                 <p className="text-sm text-gray-900">
@@ -44,7 +44,7 @@ const MainContent = () => {
             target="_blank"
             aria-label="View item"
             title="View item"
-            className="relative block p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl"
+            className="relative block p-px overflow-hidden transition duration-300 transform border border-yellow-400 rounded shadow-sm hover:scale-105 group hover:shadow-xl"
           >
             <div className="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
             <div className="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100" />
@@ -52,13 +52,15 @@ const MainContent = () => {
             <div className="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100" />
             <div className="relative flex items-center justify-between p-5 bg-white rounded-sm">
               <div className="pr-4">
-                <h6 className="mb-2 font-semibold leading-5">
+                <h6 className="mb-2 font-semibold leading-5 text-yellow-500">
                   Watch our latest videos about stock market on youtube.
                 </h6>
                 <p className="text-sm text-gray-900">
                   Our aim to reach rural India and make them understand that the
                   Stock market is not
-                  <span className="font-bold">&nbsp;Satta Bazar!</span>
+                  <span className="font-bold text-yellow-500">
+                    &nbsp;Satta Bazar!
+                  </span>
                 </p>
               </div>
               <div className="flex items-center justify-center">
@@ -94,7 +96,7 @@ const MainContent = () => {
               <a
                 href="https://www.youtube.com/channel/UCcQI3ZBq2KjOS2xfmZhef2w"
                 aria-label="youtube link"
-                className="inline-flex items-center font-semibold  duration-200 bg-yellow-400 p-3 rounded-lg text-white focus:outline-none text-lg transition motion-reduce:transform-none transform hover:scale-110 ease-in-out"
+                className="inline-flex items-center font-semibold  duration-200 bg-gradient-to-r from-yellow-300 to-yellow-500 p-3 rounded-lg text-white focus:outline-none text-lg transition motion-reduce:transform-none transform hover:scale-110 ease-in-out"
               >
                 Learn more
               </a>
