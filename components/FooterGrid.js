@@ -141,7 +141,7 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                312001, Chittorgrah, India
+                312001, Chittorgarh, India
               </a>
             </li>
             <li>
@@ -149,7 +149,7 @@ const FooterGrid = () => {
                 href="/"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                pranjal@stoclue.com
+                hello@stoclue.com
               </a>
             </li>
             {/* <li>

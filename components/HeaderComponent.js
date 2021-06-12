@@ -5,7 +5,7 @@ import { HiOutlineMenu, HiX } from "react-icons/hi";
 
 const navigation = [
   { name: "Finance Blog", href: "https://blog.stoclue.com" },
-  { name: "Return Calculators", href: "/ComingSoon" },
+  { name: "Return Calculators", href: "/calculators" },
   { name: "Trending News 🚀", href: "/ComingSoon" },
   // { name: "Stock Discussions", href: "/ComingSoon" },
   { name: "Best Discount Brokers in India", href: "/ComingSoon" },
@@ -75,7 +75,7 @@ const HeaderComponent = () => {
             <Popover.Panel
               focus
               static
-              className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10"
             >
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
