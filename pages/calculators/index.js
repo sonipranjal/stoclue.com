@@ -7,21 +7,21 @@ const allCalculators = [
     title: "Lumpsum Calculator",
     description:
       "Thinking of making a Lumpsum investment? Calculate the future value of your wealth using our Lumpsum Calculator.",
-    calcultorUrl: "/lumpsum-calculator",
+    calcultorUrl: "/calculators/lumpsum-calculator",
   },
   {
     imageUrl: "/assets/sip_calculator.jpg",
     title: "SIP Calculator",
     description:
       "Wish to invest periodically? Calculate the amount of wealth that you can generate using our SIP Calculator.",
-    calcultorUrl: "/sip-calculator",
+    calcultorUrl: "/calculators/sip-calculator",
   },
   {
     imageUrl: "/assets/goal-planning-lumpsum.jpg",
     title: "Goal Planning - Lumpsum",
     description:
       "Wish to invest once and make wealth? Calculate the Investment Amount for the same using our One-Time Investment Calculator.",
-    calcultorUrl: "/goal-planning-calculator",
+    calcultorUrl: "/calculators/goal-planning-calculator",
   },
 ];
 
