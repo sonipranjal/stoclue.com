@@ -21,7 +21,8 @@ const Faqs = [
   },
   {
     title: "How should I diversify my portfolio?",
-    description: `The investment portfolio regardless the timeframe should be balanced. So that your exposure to any one type of asset is limited. This ensures reduced volatility of your portfolio over time.
+    description: {
+      __html: `The investment portfolio regardless the timeframe should be balanced. So that your exposure to any one type of asset is limited. This ensures reduced volatility of your portfolio over time.
 
       To create a diversified portfolio, you should look for investments—stocks, bonds, cash, or others—whose returns are inversely correlated to each other. So, even if few holdings of your portfolio are declining, the rest of your portfolio can offset the loss as they are more likely to be growing.
       
@@ -32,6 +33,7 @@ const Faqs = [
       Liquid Funds
       Mutual funds
       `,
+    },
   },
 ];
 
