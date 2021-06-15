@@ -28,7 +28,7 @@ const LayoutComponent = ({ title, keywords, description, children }) => {
 export default LayoutComponent;
 
 LayoutComponent.defaultProps = {
-  title: "Stoclue | Acchi wali financial advise",
+  title: "Stoclue | Acchi wali financial advice",
   description: "Find the clue of investing in market",
   keywords: "stock, crypto, finance, investing",
 };
