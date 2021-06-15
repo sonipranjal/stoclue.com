@@ -12,6 +12,16 @@ const LayoutComponent = ({ title, keywords, description, children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EPC9HP0BFB"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-EPC9HP0BFB');
+        </script>
       </Head>
 
       <HeaderComponent />
