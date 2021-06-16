@@ -34,7 +34,7 @@ const FaqItem = ({ title, children }) => {
       </button>
       {isOpen && (
         <div className="p-4 pt-0">
-          <p className="text-gray-700">{children}</p>
+          <div className="text-gray-700">{children}</div>
         </div>
       )}
     </div>

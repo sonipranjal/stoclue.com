@@ -7,33 +7,34 @@ const Faqs = [
   {
     title: "Why is Goal Planning important?",
     description:
-      "If you want to reach somewhere, you need to firstly know where you stand and the direction of your destination. In the same way, you need to analyze your current financial status, do financial planning and plan your future goals. Goals define your future needs. Goal planning helps you become financially secure and channelize your current financial investments in such a manner that it generates returns over a time period which fulfils your targeted goals.",
+      "If you want to reach somewhere, you need to firstly know where you stand and the direction of your destination. <br/> In the same way, you need to analyze your current financial status, do financial planning and plan your future goals. Goals define your future needs. <br/> Goal planning helps you become financially secure and channelize your current financial investments in such a manner that it generates returns over a time period which fulfils your targeted goals.",
   },
   {
     title: "How do I determine my financial goals?",
     description:
-      "To determine financial goals, one must prioritize the events of their life which will be requiring funds. It can be done by prioritizing based on importance of the event and then further categorizing it by time period in which it is going to occur. For example, retirement and child’s education planning should be given more weight than the vacation and buying of new car. Further classifying, if your child’s age is 2 years and your age is 50 years, then priority should be given first to retirement planning and after that to child’s education planning.",
+      "To determine financial goals, one must prioritize the events of their life which will be requiring funds. <br/> It can be done by prioritizing based on importance of the event and then further categorizing it by time period in which it is going to occur. For example, retirement and child’s education planning should be given more weight than the vacation and buying of new car. Further classifying, if your child’s age is 2 years and your age is 50 years, then priority should be given first to retirement planning and after that to child’s education planning.",
   },
   {
     title: "What is the process of Financial Planning?",
     description:
-      "Planning your finances right is known as financial planning. Firstly, determine your current financial status that where you stand, how much money you have, etc. Then set up your long-term and short-term financial goals. You can use our SIP calculators as well. Once the goal is set then identify and evaluate the financial instruments you want to invest in and is suitable as per your risk profiling. Now implement your plan into action by starting the investment. You should periodically check the results of the plan and make changes if applicable. Know how much you will earn on SIP investment with this mutual fund calculator.",
+      "Planning your finances right is known as financial planning. Firstly, determine your current financial status that where you stand, how much money you have, etc. Then set up your long-term and short-term financial goals. <br/> You can use our SIP calculators as well. Once the goal is set then identify and evaluate the financial instruments you want to invest in and is suitable as per your risk profiling. Now implement your plan into action by starting the investment. You should periodically check the results of the plan and make changes if applicable. <br/> Know how much you will earn on SIP investment with this mutual fund calculator.",
   },
   {
     title: "How should I diversify my portfolio?",
-    description: {
-      __html: `The investment portfolio regardless the timeframe should be balanced. So that your exposure to any one type of asset is limited. This ensures reduced volatility of your portfolio over time.
-
+    description: `The investment portfolio regardless the timeframe should be balanced. So that your exposure to any one type of asset is limited. This ensures reduced volatility of your portfolio over time.
+    <br/>
       To create a diversified portfolio, you should look for investments—stocks, bonds, cash, or others—whose returns are inversely correlated to each other. So, even if few holdings of your portfolio are declining, the rest of your portfolio can offset the loss as they are more likely to be growing.
-      
+      <br/>
       You can include these instruments in your portfolio
-      
+     <br/>
       Equity Shares
+      <br/>
       Gold
+      <br/>
       Liquid Funds
+      <br/>
       Mutual funds
       `,
-    },
   },
 ];
 

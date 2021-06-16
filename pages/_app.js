@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
 import NProgress from "nprogress";
+import * as ga from "../lib/ga";
 
 Router.events.on("routeChangeStart", () => {
   NProgress.start();

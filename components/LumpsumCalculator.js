@@ -11,22 +11,22 @@ const Faqs = [
   {
     title: "What Is Lumpsum Calculator?",
     description:
-      "With Lumpsum calculator you can calculate the maturity value of your investment. In other words, the Lumpsum Calculator tells the future value of your investment made today at a certain rate of interest. For example: If you invest 1 lakh rupees for 60 years at 15% rate of interest then according to lumpsum calculator, the future value of your investments will be mindboggling 43.8 cr. after 60 years.",
+      "With Lumpsum calculator you can calculate the maturity value of your investment. In other words, the Lumpsum Calculator tells the future value of your investment made today at a certain rate of interest. <br/> For example: If you invest 1 lakh rupees for 60 years at 15% rate of interest then according to lumpsum calculator, the future value of your investments will be mindboggling 43.8 cr. after 60 years.",
   },
   {
     title: "How does this Lumpsum Calculator work?",
     description:
-      "Our lumpsum calculator is so convenient to use that even a layman can use it. In our Lumpsum Calculator, you need to just enter the required inputs such as the amount you are willing to invest, the time period (in years) you are willing to stay invested and, the expected rate of return per annum that you think the investment will generate. After entering the required variables, the calculator will give you the future value of your investments.The formula that we have used in this Lumpsum Calculator is: Value = Investment*(1+R)N",
+      "Our lumpsum calculator is so convenient to use that even a layman can use it. In our Lumpsum Calculator, you need to just enter the required inputs such as the amount you are willing to invest, the time period (in years) you are willing to stay invested and, the expected rate of return per annum that you think the investment will generate. After entering the required variables, the calculator will give you the future value of your investments.",
   },
   {
     title: "When should one prefer Lumpsum Investment?",
     description:
-      "Ideally any investment (whether lumpsum or SIP) should be done keeping in mind various things like current income, risk profile, age, tax constraints, liquidity needs, time frame and certain other unique constraints. Lumpsum investment is preferred when one has large amount of surplus funds and more importantly if he/she thinks that market has majorly corrected or it won’t fall just after making the investment. Lumpsum investment done over a longer period helps generate compounding rate of returns.",
+      "Ideally any investment (whether lumpsum or SIP) should be done keeping in mind various things like current income, risk profile, age, tax constraints, liquidity needs, time frame and certain other unique constraints. <br/> Lumpsum investment is preferred when one has large amount of surplus funds and more importantly if he/she thinks that market has majorly corrected or it won’t fall just after making the investment. Lumpsum investment done over a longer period helps generate compounding rate of returns.",
   },
   {
     title: "What’s the difference between Lumpsum and SIP?",
     description:
-      "In lumpsum investment one needs to invest only once whereas, in SIP or Systematic Investment Plan one invests a fixed amount periodically. In lumpsum investment style the market condition plays a huge role because if the market makes a major correction after your investment, then it might take few years to reach your original investment amount. Whereas, in SIP or systematic investment style one need not worry about timing the market as investment is made during both ups and downs of the market. Therefore, the return generated is weighted average return.",
+      "In lumpsum investment one needs to invest only once whereas, in SIP or Systematic Investment Plan one invests a fixed amount periodically. In lumpsum investment style the market condition plays a huge role because if the market makes a major correction after your investment, then it might take few years to reach your original investment amount. <br/> Whereas, in SIP or systematic investment style one need not worry about timing the market as investment is made during both ups and downs of the market. Therefore, the return generated is weighted average return.",
   },
   {
     title: "Where can I park my funds for Lumpsum investment?",

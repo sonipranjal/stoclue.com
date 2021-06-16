@@ -1,5 +1,9 @@
 import FaqItem from "./FaqItem";
 
+function createMarkup(htmlele) {
+  return { __html: htmlele };
+}
+
 const Faq = ({ Faqs, heading }) => {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -14,7 +18,7 @@ const Faq = ({ Faqs, heading }) => {
         <div className="space-y-4">
           {Faqs.map(({ title, description }) => (
             <FaqItem key={title} title={title}>
-              {description}
+              <div dangerouslySetInnerHTML={createMarkup(description)} />
             </FaqItem>
           ))}
         </div>
