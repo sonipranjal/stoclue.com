@@ -1,15 +1,15 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import { useEffect } from "react";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import * as ga from "../lib/ga";
 
-Router.events.on("routeChangeStart", () => {
-  NProgress.start();
-});
-Router.events.on("routeChangeComplete", () => NProgress.done());
-Router.events.on("routeChangeError", () => NProgress.done());
+// Router.events.on("routeChangeStart", () => {
+//   NProgress.start();
+// });
+// Router.events.on("routeChangeComplete", () => NProgress.done());
+// Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -28,6 +28,18 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => NProgress.start());
+    router.events.on("routeChangeComplete", () => NProgress.done());
+    router.events.on("routeChangeError", () => NProgress.done());
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off("routeChangeStart", () => NProgress.done());
+    };
+  }, [router]);
 
   return (
     <>

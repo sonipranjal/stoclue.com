@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Calculator = ({ imageUrl, title, description, calcultorUrl }) => {
   return (
-    <div className="overflow-hidden  shadow-xl duration-300 rounded-lg transition motion-reduce:transform-none transform hover:scale-105 ease-in-out">
+    <div className="overflow-hidden shadow-xl duration-300 rounded-lg transition motion-reduce:transform-none transform hover:scale-105 ease-in-out">
       <Link href={calcultorUrl}>
         <a aria-label={`${title}`}>
           <Image
