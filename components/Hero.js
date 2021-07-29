@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { useRouter } from "next/router";
 import MainContent from "./MainContent";
 
