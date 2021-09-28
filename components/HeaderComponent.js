@@ -48,7 +48,7 @@ const HeaderComponent = () => {
                     </a>
                   </Link>
                 ))}
-                <Link href="trending-news">
+                <Link href="/trending-news">
                   <a className="z-10 font-medium text-yellow-600 transition group hover:text-yellow-700 ">
                     Trending News
                     <IoRocketSharp
