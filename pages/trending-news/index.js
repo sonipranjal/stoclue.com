@@ -16,7 +16,7 @@ const TrendingNews = ({ data }) => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
           {data.map((article) => (
             <Article key={article._id} {...article} />
           ))}

@@ -16,7 +16,7 @@ module.exports = {
       padding: ['hover'],
       borderWidth: ['hover', 'focus'],
       transitionProperty: ['hover', 'focus'],
-      animation: ['motion-reduce'],
+      animation: ['motion-reduce', 'hover', 'focus', 'group-hover'],
       textColor: ['active'],
       gradientColorStops: ['active', 'group-hover'],
     },

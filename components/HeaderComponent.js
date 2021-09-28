@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import parse from 'html-react-parser';
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { HiOutlineMenu, HiX } from 'react-icons/hi';
+import { IoRocketSharp } from 'react-icons/io5';
 
 const navigation = [
   { name: 'Finance Blog', href: 'https://blog.stoclue.com' },
   { name: 'Return Calculators', href: '/calculators' },
-  { name: 'Trending News 🚀', href: '/trending-news' },
   // { name: "Stock Discussions", href: "/ComingSoon" },
   { name: 'Best Discount Brokers in India', href: '/ComingSoon' },
 ];
@@ -43,13 +44,21 @@ const HeaderComponent = () => {
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
-                    <a
-                      className="font-medium text-gray-600 transition hover:text-yellow-500 "
-                    >
+                    <a className="z-10 font-medium text-yellow-600 transition hover:text-yellow-700 ">
                       {item.name}
                     </a>
                   </Link>
                 ))}
+                <Link href="trending-news">
+                  <a className="z-10 font-medium text-yellow-600 transition group hover:text-yellow-700 ">
+                    Trending News
+                    <IoRocketSharp
+                      className="inline-block w-6 h-6 pl-1 text-yellow-600 transition group-hover:text-yellow-700 group-hover:animate-pulse"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </Link>
+
                 {/* <a
                   href="#"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
@@ -99,7 +108,14 @@ const HeaderComponent = () => {
                       </a>
                     </Link>
                   ))}
+                  <Link href="/trending-news">
+                    <a className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 group">
+                      Trending News
+                      <IoRocketSharp className="inline-block w-6 h-6 pl-1 ml-1 text-yellow-600 transition group-hover:text-yellow-700" />
+                    </a>
+                  </Link>
                 </div>
+
                 {/* <a
                   href="#"
                   className="block w-full px-5 py-3 font-medium text-center text-indigo-600 bg-gray-50 hover:bg-gray-100"
