@@ -3,15 +3,15 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 
 dayjs.extend(relativeTime);
 
-const Article = ({ img_url, description, title, createdAt, source_url }) => {
+const Article = ({ image_url, description, title, createdAt, source_url }) => {
   return (
     <div>
       <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer h-90 w-60 md:w-80">
         <a href={source_url} target="_blank" className="block w-full h-full">
-          {img_url && (
+          {image_url && (
             <img
               alt="blog photo"
-              src={img_url}
+              src={image_url}
               className="object-cover w-full max-h-40"
             />
           )}
