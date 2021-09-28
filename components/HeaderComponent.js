@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import parse from 'html-react-parser';
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { HiOutlineMenu, HiX } from 'react-icons/hi';
