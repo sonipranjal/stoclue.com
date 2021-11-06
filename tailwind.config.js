@@ -1,5 +1,8 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    '.src/pages/**/*.{js,ts,jsx,tsx}',
+    '.src/components/**/*.{js,ts,jsx,tsx}',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -19,7 +22,10 @@ module.exports = {
       animation: ['motion-reduce', 'hover', 'focus', 'group-hover'],
       textColor: ['active'],
       gradientColorStops: ['active', 'group-hover'],
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
+      inset: ['checked'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

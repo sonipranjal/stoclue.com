@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-stocluecom-staging-43816-authRole",
+      "UnauthRoleArn": "arn:aws:iam::114559140174:role/amplify-stocluecom-staging-43816-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::114559140174:role/amplify-stocluecom-staging-43816-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-stocluecom-staging-43816-deployment",
+      "UnauthRoleName": "amplify-stocluecom-staging-43816-unauthRole",
+      "StackName": "amplify-stocluecom-staging-43816",
+      "StackId": "arn:aws:cloudformation:ap-south-1:114559140174:stack/amplify-stocluecom-staging-43816/5c7c9e00-3ebb-11ec-9c8b-02176a1985f8",
+      "AmplifyAppId": "d3pxbtdkq8lmbf"
+    },
+    "categories": {
+      "auth": {
+        "stocluecom": {}
+      }
+    }
+  }
+}
