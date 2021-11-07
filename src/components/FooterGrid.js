@@ -141,16 +141,14 @@ const FooterGrid = () => {
           </p>
           <ul className="mt-2 space-y-2">
             <li>
-              <a
-                href="/"
-                className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >
+              <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                 312001, Chittorgarh, India
               </a>
             </li>
             <li>
               <a
-                href="/"
+                href="mailto:hello@stoclue.com"
+                target="_blank"
                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 hello@stoclue.com

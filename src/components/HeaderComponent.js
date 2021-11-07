@@ -1,20 +1,38 @@
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { HiOutlineMenu, HiX } from 'react-icons/hi';
 import { IoRocketSharp } from 'react-icons/io5';
-
-const navigation = [
-  { name: 'Finance Blog', href: 'https://blog.stoclue.com' },
-  { name: 'Return Calculators', href: '/calculators' },
-  { name: 'News', href: '/trending-news' },
-  // { name: "Stock Discussions", href: "/ComingSoon" },
-  // { name: 'Best Discount Brokers in India', href: '/ComingSoon' },
-  { name: 'Log in', href: '/login' },
-  // { name: 'Register', href: '/register' },
-];
+import { Auth } from 'aws-amplify';
+import { useRouter } from 'next/router';
 
 const HeaderComponent = () => {
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    (async function () {
+      const user = await Auth.currentAuthenticatedUser();
+      setUser(user?.attributes?.email);
+    })();
+  }, []);
+
+  const navigation = [
+    { name: 'Return Calculators', href: '/calculators' },
+    { name: 'News', href: '/trending-news' },
+    { name: 'Premium Newsletter', href: '/premium-newsletter' },
+  ];
+
+  const handleSignout = async () => {
+    try {
+      await Auth.signOut();
+      router.push('/');
+      window.location.reload();
+    } catch (error) {
+      console.error('error signing out: ', error);
+    }
+  };
+
   return (
     <Popover>
       {({ open }) => (
@@ -51,6 +69,32 @@ const HeaderComponent = () => {
                     </a>
                   </Link>
                 ))}
+                {!user && (
+                  <Link href="/login">
+                    <a className="z-10 font-medium text-yellow-600 transition hover:text-yellow-700 ">
+                      Log in
+                    </a>
+                  </Link>
+                )}
+
+                {!user && (
+                  <Link href="/register">
+                    <a className="z-10 font-medium text-yellow-600 transition hover:text-yellow-700 ">
+                      Sign up
+                    </a>
+                  </Link>
+                )}
+
+                {user && (
+                  <div
+                    onClick={handleSignout}
+                    className="inline-block cursor-pointer"
+                  >
+                    <div className="z-10 font-medium text-yellow-600 transition hover:text-yellow-700 ">
+                      Logout
+                    </div>
+                  </div>
+                )}
               </div>
             </nav>
           </div>
@@ -94,6 +138,28 @@ const HeaderComponent = () => {
                       </a>
                     </Link>
                   ))}
+                  {!user && (
+                    <Link href="/login">
+                      <a className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ">
+                        Log in
+                      </a>
+                    </Link>
+                  )}
+
+                  {!user && (
+                    <Link href="/register">
+                      <a className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ">
+                        Sign up
+                      </a>
+                    </Link>
+                  )}
+                  {user && (
+                    <div onClick={handleSignout} className="cursor-pointer">
+                      <a className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ">
+                        Sign out
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </Popover.Panel>

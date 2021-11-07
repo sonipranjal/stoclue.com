@@ -1,8 +1,8 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import FooterComponent from "./FooterComponent";
-import HeaderComponent from "./HeaderComponent";
-import Hero from "./Hero";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import FooterComponent from './FooterComponent';
+import HeaderComponent from './HeaderComponent';
+import Hero from './Hero';
 
 const LayoutComponent = ({ title, keywords, description, children }) => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const LayoutComponent = ({ title, keywords, description, children }) => {
 
       <HeaderComponent />
 
-      {router.pathname === "/" && <Hero />}
+      {router.pathname === '/' && <Hero />}
 
       <div>{children}</div>
 
@@ -28,7 +28,7 @@ const LayoutComponent = ({ title, keywords, description, children }) => {
 export default LayoutComponent;
 
 LayoutComponent.defaultProps = {
-  title: "Stoclue | Research Ours - Growth Yours",
-  description: "Find the clue of investing in market",
-  keywords: "stockmarket, crypto, finance, investing",
+  title: 'Stoclue | Research Ours - Growth Yours',
+  description: 'Find the clue of investing in market',
+  keywords: 'stockmarket, crypto, finance, investing',
 };

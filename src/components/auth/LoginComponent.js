@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { HiLockClosed } from 'react-icons/hi';
 import { useRouter } from 'next/router';
@@ -13,11 +13,21 @@ const LoginComponent = () => {
 
   const router = useRouter();
 
+  useEffect(() => {
+    (async function () {
+      const user = await Auth.currentAuthenticatedUser();
+      if (user) {
+        toast.error('already signed in');
+        router.push('/');
+      }
+    })();
+  }, []);
+
   const signIn = async () => {
     try {
       await Auth.signIn(email, password);
       toast.success(`Success`);
-      router.push('/');
+      router.push('/premium-newsletter');
     } catch (error) {
       toast.error(error.message);
     }

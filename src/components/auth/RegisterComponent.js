@@ -6,6 +6,8 @@ import { Auth } from 'aws-amplify';
 import { validateEmail } from 'src/utils';
 import { useRouter } from 'next/router';
 import toast, { Toaster } from 'react-hot-toast';
+import jwt from 'jsonwebtoken';
+import axios from 'axios';
 
 const RegisterComponent = () => {
   const [password, setPassword] = useState('');
@@ -17,6 +19,18 @@ const RegisterComponent = () => {
 
   const router = useRouter();
 
+  const addSubscriber = async () => {
+    const token = jwt.sign(
+      'stocluemailboi',
+      process.env.NEXT_PUBLIC_SECRET_KEY
+    );
+    await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/subscribe`, {
+      email,
+      name,
+      token,
+    });
+  };
+
   const signUp = async () => {
     try {
       const { user } = await Auth.signUp({
@@ -24,6 +38,7 @@ const RegisterComponent = () => {
         password,
         attributes: {
           email, // optional
+          name,
         },
       });
       setConfirmCode(true);
@@ -53,6 +68,7 @@ const RegisterComponent = () => {
     try {
       await Auth.confirmSignUp(email, otp);
       toast.success('Verified!');
+      await addSubscriber();
       router.push('/');
     } catch (error) {
       toast.error(error.message);
@@ -175,6 +191,7 @@ const RegisterComponent = () => {
                   className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
                   placeholder="Name"
                   value={name}
+                  required
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>

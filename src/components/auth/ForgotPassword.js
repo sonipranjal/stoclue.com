@@ -16,10 +16,9 @@ const ForgotPassword = () => {
 
   const forgotPassword = async () => {
     try {
-      const data = await Auth.forgotPassword(email);
+      await Auth.forgotPassword(email);
       toast.success(`We have sent a verification code to ${email}`);
       setConfirmation(true);
-      console.log(data);
     } catch (error) {
       toast.error(error.message);
     }
