@@ -6,7 +6,7 @@ import initMiddleware from '../../../lib/init-middleware';
 // Initialize the cors middleware
 const cors = initMiddleware(
   Cors({
-    methods: ['POST'],
+    methods: ['GET'],
     origin: ['https://www.stoclue.com', /\.stoclue\.com$/],
   })
 );
@@ -31,6 +31,7 @@ const handler = async (req, res) => {
       });
       return res.status(200).json(data);
     } catch (error) {
+      console.log(error);
       return res.status(429).json({ error });
     }
   } else {

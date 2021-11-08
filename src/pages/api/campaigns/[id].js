@@ -6,7 +6,7 @@ import initMiddleware from '../../../lib/init-middleware';
 // Initialize the cors middleware
 const cors = initMiddleware(
   Cors({
-    methods: ['POST'],
+    methods: ['GET'],
     origin: ['https://www.stoclue.com', /\.stoclue\.com$/],
   })
 );
