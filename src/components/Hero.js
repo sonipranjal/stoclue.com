@@ -8,9 +8,10 @@ const Hero = () => {
       <div className="text-gray-600 body-font">
         <div className="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row">
           <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
-            <h1 className="mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-yellow-500 to-yellow-700 title-font sm:text-4xl">
+            <h1 className="text-3xl font-bold text-transparent  bg-clip-text bg-gradient-to-tl from-yellow-500 to-yellow-700 title-font sm:text-4xl">
               BECOME A PRO INVESTOR
-              <br className="hidden lg:inline-block" />
+            </h1>
+            <h1 className="mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-yellow-500 to-yellow-700 title-font sm:text-4xl">
               ONE STEP AT A TIME!
             </h1>
             <p className="mb-8 leading-relaxed text-gray-900">

@@ -1,7 +1,7 @@
 import LayoutComponent from '@/components/LayoutComponent';
 import axios from 'axios';
 import Newsletter from '@/components/premiumNewsletter/Newsletter';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Auth } from 'aws-amplify';
 
 import toast, { Toaster } from 'react-hot-toast';
@@ -14,13 +14,21 @@ const PremiumNewsletterPage = () => {
 
   const router = useRouter();
 
-  const loadPremiumContent = useCallback(async () => {
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/campaigns`
-    );
-    setCampaigns(data.data.results);
-    setLoading(false);
-  }, []);
+  const loadPremiumContent = async () => {
+    try {
+      const { data } = await axios.get(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/campaigns`
+      );
+      setCampaigns(data.data.results);
+      setLoading(false);
+      return;
+    } catch (err) {
+      toast.error('Check back later!');
+      console.error(err);
+      setLoading(false);
+      return;
+    }
+  };
 
   const checkExistingUser = async () => {
     try {
