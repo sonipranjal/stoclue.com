@@ -13,10 +13,10 @@ const cors = initMiddleware(
   })
 );
 
-const limiter = rateLimit({
-  interval: 60 * 1000, // 60 seconds
-  uniqueTokenPerInterval: 500, // Max 500 users per second
-});
+// const limiter = rateLimit({
+//   interval: 60 * 1000, // 60 seconds
+//   uniqueTokenPerInterval: 500, // Max 500 users per second
+// });
 
 const handler = async (req, res) => {
   await cors(req, res);
