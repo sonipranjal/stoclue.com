@@ -29,7 +29,7 @@ const handler = async (req, res) => {
     }
 
     try {
-      await limiter.check(res, 10, 'CACHE_TOKEN'); // 10 requests per minute
+      // await limiter.check(res, 10, 'CACHE_TOKEN'); // 10 requests per minute
 
       const decoded_token = jwt.verify(token, process.env.SECRET_KEY);
 

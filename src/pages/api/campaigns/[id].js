@@ -21,7 +21,7 @@ const handler = async (req, res) => {
 
   if (req.method === 'GET') {
     try {
-      await limiter.check(res, 50, 'CAMPAIGN_CACHE_TOKEN'); // 10 requests per minute
+      // await limiter.check(res, 50, 'CAMPAIGN_CACHE_TOKEN'); // 10 requests per minute
 
       const { id } = req.query;
 

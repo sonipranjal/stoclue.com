@@ -21,7 +21,7 @@ const handler = async (req, res) => {
 
   if (req.method === 'GET') {
     try {
-      await limiter.check(res, 50, 'CACHE_TOKEN');
+      // await limiter.check(res, 50, 'CACHE_TOKEN');
 
       const { data } = await axios.get(`${process.env.BASE_URL}/campaigns`, {
         auth: {
@@ -31,6 +31,7 @@ const handler = async (req, res) => {
       });
       return res.status(200).json(data);
     } catch (error) {
+      console.log(error);
       return res.status(429).json({ error });
     }
   } else {
