@@ -13,10 +13,10 @@ const cors = initMiddleware(
   })
 );
 
-// const limiter = rateLimit({
-//   interval: 60 * 1000, // 60 seconds
-//   uniqueTokenPerInterval: 500, // Max 500 users per second
-// });
+const limiter = rateLimit({
+  interval: 60 * 1000, // 60 seconds
+  uniqueTokenPerInterval: 500, // Max 500 users per second
+});
 
 const handler = async (req, res) => {
   await cors(req, res);
@@ -29,7 +29,7 @@ const handler = async (req, res) => {
     }
 
     try {
-      // await limiter.check(res, 10, 'CACHE_TOKEN'); // 10 requests per minute
+      await limiter.check(res, 10, 'CACHE_TOKEN'); // 10 requests per minute
 
       const decoded_token = jwt.verify(token, process.env.SECRET_KEY);
 
