@@ -19,16 +19,31 @@ const RegisterComponent = () => {
 
   const router = useRouter();
 
+  useEffect(() => {
+    (async function () {
+      const user = await Auth.currentAuthenticatedUser();
+      if (user) {
+        toast.error('already logged in');
+        router.push('/premium-newsletter');
+        return;
+      }
+    })();
+  }, []);
+
   const addSubscriber = async () => {
-    const token = jwt.sign(
-      'stocluemailboi',
-      process.env.NEXT_PUBLIC_SECRET_KEY
-    );
-    await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/subscribe`, {
-      email,
-      name,
-      token,
-    });
+    try {
+      const token = jwt.sign(
+        'stocluemailboi',
+        process.env.NEXT_PUBLIC_SECRET_KEY
+      );
+      await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/subscribe`, {
+        email,
+        name,
+        token,
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const signUp = async () => {
@@ -68,12 +83,24 @@ const RegisterComponent = () => {
     try {
       await Auth.confirmSignUp(email, otp);
       toast.success('Verified!');
-      await addSubscriber();
-      router.push('/');
+      await Auth.signIn(email, password);
+      addSubscriber();
+      router.push('/premium-newsletter');
+      toast.success('Welcome to Stoclue!');
     } catch (error) {
       toast.error(error.message);
     }
     setLoading(false);
+  };
+
+  const resendConfirmationCode = async () => {
+    try {
+      await Auth.resendSignUp(email);
+      toast.success('code resent successfully');
+    } catch (err) {
+      console.error(err);
+      toast.error(err.message);
+    }
   };
 
   return (
@@ -95,7 +122,7 @@ const RegisterComponent = () => {
           )}
         </div>
 
-        {!confirmCode && (
+        {/* {!confirmCode && (
           <div className="mt-6">
             <div className="grid grid-cols-1 mb-6 ">
               <div>
@@ -129,53 +156,65 @@ const RegisterComponent = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         {confirmCode ? (
-          <form className="mt-8 space-y-6" onSubmit={handleConfirmCode}>
-            <label htmlFor="confirm" className="sr-only">
-              confirmation code
-            </label>
-            <input
-              id="confirmation-code"
-              name="confirm"
-              type="text"
-              required
-              className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
-              placeholder="Confirmation Code"
-              value={otp}
-              onChange={(e) => setOtp(e.target.value)}
-            />
-            <div>
-              {loading ? (
-                <button
-                  disabled
-                  className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-yellow-600 border border-transparent rounded-md group hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-                >
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <AiOutlineLoading3Quarters
-                      className="w-5 h-5 text-yellow-500 animate-spin group-hover:text-yellow-400"
-                      aria-hidden="true"
-                    />
-                  </span>
-                  Processing
-                </button>
-              ) : (
-                <button
-                  type="submit"
-                  className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-yellow-600 border border-transparent rounded-md group hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-                >
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <HiLockClosed
-                      className="w-5 h-5 text-yellow-500 group-hover:text-yellow-400"
-                      aria-hidden="true"
-                    />
-                  </span>
-                  Confirm
-                </button>
-              )}
+          <div>
+            <form className="mt-8 space-y-6" onSubmit={handleConfirmCode}>
+              <label htmlFor="confirm" className="sr-only">
+                confirmation code
+              </label>
+              <input
+                id="confirmation-code"
+                name="confirm"
+                type="text"
+                required
+                className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                placeholder="Confirmation Code"
+                value={otp}
+                onChange={(e) => setOtp(e.target.value)}
+              />
+              <div>
+                {loading ? (
+                  <button
+                    disabled
+                    className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-yellow-600 border border-transparent rounded-md group hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                  >
+                    <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                      <AiOutlineLoading3Quarters
+                        className="w-5 h-5 text-yellow-500 animate-spin group-hover:text-yellow-400"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    Processing
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-yellow-600 border border-transparent rounded-md group hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                  >
+                    <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                      <HiLockClosed
+                        className="w-5 h-5 text-yellow-500 group-hover:text-yellow-400"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    Confirm
+                  </button>
+                )}
+              </div>
+            </form>
+
+            <div className="flex flex-row justify-center mt-5 text-sm">
+              <span className="mr-3">Didn't get a code?</span>
+              <div
+                onClick={resendConfirmationCode}
+                className="font-medium text-yellow-600 underline cursor-pointer hover:text-yellow-500"
+              >
+                Resend
+              </div>
             </div>
-          </form>
+          </div>
         ) : (
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <input type="hidden" name="remember" defaultValue="true" />
@@ -261,16 +300,18 @@ const RegisterComponent = () => {
           </form>
         )}
 
-        <div className="flex items-center justify-center ">
-          <div className="text-sm">
-            <span className="mr-3">Already have an account?</span>
-            <Link href="/login">
-              <a className="font-medium text-yellow-600 underline hover:text-yellow-500">
-                Log in
-              </a>
-            </Link>
+        {!confirmCode && (
+          <div className="flex items-center justify-center ">
+            <div className="text-sm">
+              <span className="mr-3">Already have an account?</span>
+              <Link href="/login">
+                <a className="font-medium text-yellow-600 underline hover:text-yellow-500">
+                  Log in
+                </a>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

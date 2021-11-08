@@ -1,16 +1,17 @@
-import { useRouter } from "next/router";
-import MainContent from "./MainContent";
+import { useRouter } from 'next/router';
+import MainContent from './MainContent';
 
 const Hero = () => {
   const router = useRouter();
   return (
     <>
       <div className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-yellow-500">
-              Looking to open your Demat Account?
+        <div className="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row">
+          <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
+            <h1 className="mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-yellow-500 to-yellow-700 title-font sm:text-4xl">
+              BECOME A PRO INVESTOR
               <br className="hidden lg:inline-block" />
+              ONE STEP AT A TIME!
             </h1>
             <p className="mb-8 leading-relaxed text-gray-900">
               Stoclue is born to empower the common investors. With our unbiased
@@ -20,14 +21,14 @@ const Hero = () => {
             </p>
             <div className="flex justify-center hover:scale-105">
               <button
-                className="inline-flex text-white bg-gradient-to-r from-yellow-300 to-yellow-500 font-mono font-medium border-0 py-2 px-6 focus:outline-none rounded text-lg transition motion-reduce:transform-none transform hover:scale-110 ease-in-out hover:bg-yellow-500"
-                onClick={() => router.push("/ComingSoon")}
+                className="inline-flex px-6 py-2 font-mono text-lg font-medium text-white transition ease-in-out transform border-0 rounded bg-gradient-to-r from-yellow-500 to-yellow-600 focus:outline-none motion-reduce:transform-none hover:scale-110 hover:bg-yellow-500"
+                onClick={() => router.push('/register')}
               >
                 Know More!
               </button>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
             <img
               className="object-cover object-center rounded"
               alt="hero"
