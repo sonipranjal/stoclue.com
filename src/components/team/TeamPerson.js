@@ -1,7 +1,7 @@
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Image from 'next/image';
 
-const TeamPerson = ({ name, img_url, about, linkedIn, twitter }) => {
+const TeamPerson = ({ name, img_url, about, linkedIn, twitter, role }) => {
   return (
     <div className="relative p-4 select-none">
       <div className="absolute mb-4 text-center transform translate-x-1/2 -top-16 right-1/2">
@@ -16,7 +16,7 @@ const TeamPerson = ({ name, img_url, about, linkedIn, twitter }) => {
       <div className="px-8 py-4 pt-24 rounded-lg shadow bg-gradient-to-tr from-yellow-400 via-yellow-500 to-yellow-600">
         <div className="text-center">
           <p className="text-2xl font-medium text-white">{name}</p>
-          <p className="text-xl font-light text-white">Co-Founder</p>
+          <p className="text-xl font-light text-white">{role}</p>
           <p className="py-4 mx-auto font-light text-white text-md w-60">
             {about}
           </p>

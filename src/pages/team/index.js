@@ -3,23 +3,12 @@ import TeamPerson from '@/components/team/TeamPerson';
 
 const team = [
   {
-    name: 'Monil Jain',
-    img_url: '/assets/monil-profile.jpg',
-    about: 'Focused',
-    linkedIn: 'https://www.linkedin.com/in/monil-sarupariya-332281174/',
-  },
-  {
-    name: 'Devendra Jat',
-    img_url: '/assets/devendra-profile.jpeg',
-    about: 'Passionate',
-    linkedIn: 'https://www.linkedin.com/in/devendrajat/',
-  },
-  {
     name: 'Pranjal Soni',
     img_url: '/assets/pranjal-profile.jpeg',
-    about: 'Curious',
+    about: 'Curious, Focused, Passionate',
     linkedIn: 'https://www.linkedin.com/in/pranjalsoni',
     twitter: 'https://twitter.com/pranjalsoni_',
+    role: 'Founder',
   },
 ];
 

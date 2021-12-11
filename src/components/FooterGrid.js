@@ -100,13 +100,13 @@ const FooterGrid = () => {
                 About us
               </a>
             </li>
-            <li>
+            {/* <li>
               <Link href="/team">
                 <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                   Team
                 </a>
               </Link>
-            </li>
+            </li> */}
             <li>
               <a
                 href="/privacy-policy"
